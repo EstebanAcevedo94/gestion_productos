@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boleta de Venta</title>
+</head>
+<body>
+    <h1>Boleta de Venta</h1>
+    <p>Producto: {{ venta.producto.nombre }}</p>
+    <p>Cantidad: {{ venta.cantidad }}</p>
+    <p>Fecha de Venta: {{ venta.fecha }}</p>
+
+    <a href="{% url 'generar_boleta_pdf' venta.id %}">Descargar Boleta en PDF</a>
+</body>
+</html>
